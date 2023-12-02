@@ -31,7 +31,7 @@ public class TestBase {
 	    driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://demowebshop.tricentis.com/");
-  	  	extentTest = extentreports.createTest(context.getName());
+  	  	//extentTest = extentreports.createTest(context.getName());
 
 	}
 
@@ -39,37 +39,37 @@ public class TestBase {
    	  driver.quit();
      }
      
-     @BeforeSuite
-     public void InitalizeExtentReport()
-     {
- 		ExtentSparkReporter sparkreporter = new ExtentSparkReporter("report.html");
- 		extentreports = new ExtentReports();
- 		extentreports.attachReporter(sparkreporter);
+ //     @BeforeSuite
+ //     public void InitalizeExtentReport()
+ //     {
+ // 		ExtentSparkReporter sparkreporter = new ExtentSparkReporter("report.html");
+ // 		extentreports = new ExtentReports();
+ // 		extentreports.attachReporter(sparkreporter);
  		
- 		// on the report display more information about OS, java
- 		extentreports.setSystemInfo("OS", System.getProperty("os.name"));
- 		extentreports.setSystemInfo("JAVA", System.getProperty("java.version"));
- 	}
+ // 		// on the report display more information about OS, java
+ // 		extentreports.setSystemInfo("OS", System.getProperty("os.name"));
+ // 		extentreports.setSystemInfo("JAVA", System.getProperty("java.version"));
+ // 	}
 
- 	@AfterSuite
- 	public void generateReports() throws IOException
- 	{
- 		extentreports.flush();
- 		Desktop.getDesktop().browse(new File("report.html").toURI());
- 	}
+ // 	@AfterSuite
+ // 	public void generateReports() throws IOException
+ // 	{
+ // 		extentreports.flush();
+ // 		Desktop.getDesktop().browse(new File("report.html").toURI());
+ // 	}
  	
- 	@AfterMethod
-	public void generateTestStatus(Method m,ITestResult result)
-	{
-		if(result.getStatus() == ITestResult.FAILURE )
-		{
-			System.out.println("Capture Screenshot");
-			extentTest.fail(result.getThrowable());
-		}
-		else if (result.getStatus() == ITestResult.SUCCESS) {
-			extentTest.pass(m.getName() + " is passed");
-		}
-	}
+ // 	@AfterMethod
+	// public void generateTestStatus(Method m,ITestResult result)
+	// {
+	// 	if(result.getStatus() == ITestResult.FAILURE )
+	// 	{
+	// 		System.out.println("Capture Screenshot");
+	// 		extentTest.fail(result.getThrowable());
+	// 	}
+	// 	else if (result.getStatus() == ITestResult.SUCCESS) {
+	// 		extentTest.pass(m.getName() + " is passed");
+	// 	}
+	// }
 
 	
 }
