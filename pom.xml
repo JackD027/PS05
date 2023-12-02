@@ -63,11 +63,7 @@
 			<artifactId>poi-ooxml-schemas</artifactId>
 			<version>4.1.1</version>
 		</dependency>
-		<dependency>
-			<groupId>NinjaDemo-POMFramework</groupId>
-			<artifactId>NinjaDemo-POMFramework</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
 	</dependencies>
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven
