@@ -1,0 +1,11 @@
+<suite name="test1" verbose="1">
+ 
+<test name="POMframework">
+<listeners>
+    <listener class-name="com.demowebshop.listeners.ListenerClass"></listener>
+  </listeners>
+<packages>
+	<package name="com.demowebshop.tests"></package>
+</packages>
+</test>
+</suite>
