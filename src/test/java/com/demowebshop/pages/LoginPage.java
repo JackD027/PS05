@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Listeners;
 
-//@Listeners (com.demowebshop.listeners.ListenerClass.class)
+@Listeners (com.demowebshop.listeners.ListenerClass.class)
 public class LoginPage {
 	
 	@FindBy(xpath = "//input[@id='Email']")
