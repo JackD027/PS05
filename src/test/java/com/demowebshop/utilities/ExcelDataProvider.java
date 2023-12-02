@@ -19,7 +19,7 @@ public class ExcelDataProvider {
 	static Workbook book;
 	static Sheet sheet;
    
-	public static String testdata_sheet_path = "C:\\Users\\Shubhendu Shekhar\\Desktop\\login.xlsx";
+	public static String testdata_sheet_path = "src/test/resources/login.xlsx";
 	
 	public static Object[][] getTestData(String sheetName ) throws EncryptedDocumentException, IOException
 	{
