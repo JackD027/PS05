@@ -26,7 +26,7 @@ public class TestBase {
   	public static ExtentTest extentTest;
 	
   
-  	public static void openBrowser()
+  	public static void openBrowser(ITestContext context)
 	{
 	    driver = new ChromeDriver();
 		driver.manage().window().maximize();
