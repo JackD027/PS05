@@ -25,7 +25,7 @@ public class TestLoginPage extends TestBase{
 	@BeforeMethod
 	public void OpenApp(ITestContext context)
 	{
-		openBrowser(ITestContext context);		
+		openBrowser(context);		
 		homePage = new HomePage(driver);
 		loginPage= new LoginPage(driver);
 	}
